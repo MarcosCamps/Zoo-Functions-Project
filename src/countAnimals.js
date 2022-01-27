@@ -15,7 +15,8 @@ function countAnimals(animal) {
     return countSpecie;
   }
   if (Object.keys(animal).length === 2) {
-    const countGender = species.find((curr) => curr.name === specie).residents.filter((gender) => gender.sex === sex).length;
+    const countGender = species
+      .find((curr) => curr.name === specie).residents.filter((gender) => gender.sex === sex).length;
     return countGender;
   }
 }

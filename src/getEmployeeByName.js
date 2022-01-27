@@ -5,7 +5,8 @@ function getEmployeeByName(employeeName) {
     return {};
     // If auxiliado por Victor Amancio Tribo C
   }
-  return data.employees.find((employee) => employee.firstName === employeeName || employee.lastName === employeeName);
+  return data.employees.find((employee) => employee
+    .firstName === employeeName || employee.lastName === employeeName);
 }
 
 module.exports = getEmployeeByName;
