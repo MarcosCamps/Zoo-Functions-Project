@@ -1,8 +1,6 @@
 const { species } = require('../data/zoo_data');
 const data = require('../data/zoo_data');
 
-
-
 function countAnimals(animal) {
   if (!animal) {
     const objeto = {};
@@ -17,12 +15,10 @@ function countAnimals(animal) {
     return countSpecie;
   }
   if (Object.keys(animal).length === 2) {
-    const countSex = species.find((curr) => curr.name === specie).residents.filter((genre) => genre.sex === sex).length;
-    return countSex;
+    const countGender = species.find((curr) => curr.name === specie).residents.filter((gender) => gender.sex === sex).length;
+    return countGender;
   }
 }
-
-
-console.log(countAnimals({ specie: 'giraffes', sex: 'female' }));
+// console.log(countAnimals({ specie: 'giraffes', sex: 'female' }));
 
 module.exports = countAnimals;
